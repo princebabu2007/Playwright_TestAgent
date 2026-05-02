@@ -40,7 +40,7 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     // 1. The Setup Project
-    /*{
+    {
       name: 'setup',
       testMatch: /.*\.setup\.js/,
       teardown: 'cleanup', // <--- Link to the cleanup project
@@ -48,18 +48,18 @@ export default defineConfig({
      {
       name: 'cleanup',
       testMatch: /.*\.teardown\.js/,      
-    }, */
+    },
     {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
         storageState: './.auth/user.json',
       },
-      //dependencies: ['setup'],
+      dependencies: ['setup'],
       headless: false // Set headless to false to see the browser during test execution      
     }
     /*,
-    
+
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
