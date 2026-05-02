@@ -43,12 +43,12 @@ export default defineConfig({
     {
       name: 'setup',
       testMatch: /.*\.setup\.js/,
-      teardown: 'cleanup', // <--- Link to the cleanup project
+      //teardown: 'cleanup', // <--- Link to the cleanup project
     },
-     {
-      name: 'cleanup',
-      testMatch: /.*\.teardown\.js/,      
-    },
+    //  {
+    //   name: 'cleanup',
+    //   testMatch: /.*\.teardown\.js/,      
+    // },
     {
       name: 'chromium',
       use: {
